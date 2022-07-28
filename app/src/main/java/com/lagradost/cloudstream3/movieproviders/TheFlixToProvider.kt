@@ -100,24 +100,7 @@ class TheFlixToProvider : MainAPI() {
 
 
     private suspend fun getCookies(): Map<String, String> {
-        //  val cookieResponse = app.post(
-        //      "https://theflix.to:5679/authorization/session/continue?contentUsageType=Viewing",
-        //    headers = mapOf(
-        //          "Host" to "theflix.to:5679",
-        //          "User-Agent" to "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0",
-        //          "Accept" to "application/json, text/plain,"
-        //          "Accept-Language" to "en-US,en;q=0.5",
-        //          "Content-Type" to "application/json;charset=utf-8",
-        //          "Content-Length" to "35",
-        //          "Origin" to "https://theflix.to",
-        //          "DNT" to "1",
-        //          "Connection" to "keep-alive",
-        //          "Referer" to "https://theflix.to/",
-        //          "Sec-Fetch-Dest" to "empty",
-        //          "Sec-Fetch-Mode" to "cors",
-        //          "Sec-Fetch-Site" to "same-site",)).okhttpResponse.headers.values("Set-Cookie")
-
-        val cookies = app.post(
+        val cookieResponse = app.post(
             "$mainUrl:5679/authorization/session/continue?contentUsageType=Viewing",
             headers = mapOf(
                 "Host" to "theflix.to:5679",
@@ -133,12 +116,12 @@ class TheFlixToProvider : MainAPI() {
                 "Sec-Fetch-Dest" to "empty",
                 "Sec-Fetch-Mode" to "cors",
                 "Sec-Fetch-Site" to "same-site",)
-        ).cookies
-        /* val cookieRegex = Regex("(theflix\\..*?id\\=[a-zA-Z0-9]{0,8}[a-zA-Z0-9_-]+)")
-       val findcookie = cookieRegex.findAll(cookieResponse.toString()).map { it.value }.toList()
-       val cookiesstring = findcookie.toString().replace(", ","; ").replace("[","").replace("]","")
-       val cookiesmap = mapOf("Cookie" to cookiesstring) */
-        latestCookies = cookies
+        ).okhttpResponse.headers.values("Set-Cookie")
+        val cookieRegex = Regex("(theflix\\..*?id\\=[a-zA-Z0-9]{0,8}[a-zA-Z0-9_-]+)")
+        val findcookie = cookieRegex.findAll(cookieResponse.toString()).map { it.value }.toList()
+        val cookiesstring = findcookie.toString().replace(", ","; ").replace("[","").replace("]","")
+        val cookiesmap = mapOf("Cookie" to cookiesstring)
+        latestCookies = cookiesmap
         return latestCookies
     }
 
