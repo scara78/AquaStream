@@ -45,13 +45,13 @@
             app:key="@string/playback_speed_enabled_key"
             android:title="@string/eigengraumode_settings"
             android:summary="@string/eigengraumode_settings_des"
-            app:defaultValue="false" />
+            app:defaultValue="true" />
     <SwitchPreference
             android:icon="@drawable/ic_baseline_ondemand_video_24"
             app:key="@string/swipe_enabled_key"
             android:title="@string/swipe_to_seek_settings"
             android:summary="@string/swipe_to_seek_settings_des"
-            app:defaultValue="true" />
+            app:defaultValue="false" />
     <SwitchPreference
             android:icon="@drawable/ic_baseline_ondemand_video_24"
             app:key="@string/swipe_vertical_enabled_key"
@@ -63,7 +63,7 @@
             app:key="@string/double_tap_enabled_key"
             android:title="@string/double_tap_to_seek_settings"
             android:summary="@string/double_tap_to_seek_settings_des"
-            app:defaultValue="false" />
+            app:defaultValue="true" />
     <SwitchPreference
             android:icon="@drawable/netflix_pause"
             app:key="@string/double_tap_pause_enabled_key"

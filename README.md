@@ -1,14 +1,14 @@
 # CloudStream-3
 
 <!-- ![Maintenance](https://img.shields.io/maintenance/yes/2022?color=blue&style=for-the-badge) -->
-![GitHub release](https://img.shields.io/github/v/release/LagradOst/cloudstream-3?sort=semver&style=for-the-badge)
-![Downloads](https://img.shields.io/github/downloads/lagradost/CloudStream-3/total?color=blue&style=for-the-badge)
-![Build](https://img.shields.io/github/workflow/status/lagradost/CloudStream-3/Pre-release?style=for-the-badge)
+![GitHub release](https://img.shields.io/github/v/release/killerdogeempire/cloudstream-3?sort=semver&style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/killerdogeempire/CloudStream-3/total?color=blue&style=for-the-badge)
+![Build](https://img.shields.io/github/workflow/status/killerdogeempire/CloudStream-3/Pre-release?style=for-the-badge)
 [![Discord](https://img.shields.io/discord/737724143126052974?style=for-the-badge)](https://discord.gg/5Hus6fM)
 
 
 **DOWNLOAD:**
-https://github.com/LagradOst/CloudStream-3/releases
+https://github.com/KillerDogeEmpire/CloudStream-3/releases
 
 
 ***Features:***
@@ -16,7 +16,13 @@ https://github.com/LagradOst/CloudStream-3/releases
 + No tracking/analytics
 + Bookmarks
 + Download and stream movies, tv-shows and anime
-+ Chromecast
++ Chromecast support
+
+**Crunchyroll Credit:**
+I'm using the Crunchyroll and other providers from Stormunblessed's Cs3 fork. If they stop working please download his fork here https://github.com/Stormunblessed/CloudStream-3
+
+**NSFW Credit:**
+I'm using the NSFW providers from JaceKun's Cs3 fork. If they stop working please download his fork here https://github.com/Jacekun/CloudStream-3XXX
 
 ***Screenshots:***
 (All the images are blurred because of DMCA reasons, but are actually not blurred in the app)
@@ -62,4 +68,4 @@ It merely scrapes 3rd-party websites that are publicly accessable via any regula
 
 ***Sites used:***
 
-Look [here](https://lagradost.github.io/CloudStream-3/) for a comprehensive list
+Look [here](https://killerdogeempire.github.io/CloudStream-3/) for a comprehensive list

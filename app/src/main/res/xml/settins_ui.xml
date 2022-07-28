@@ -43,11 +43,11 @@
             android:key="@string/show_fillers_key"
             android:icon="@drawable/ic_baseline_skip_next_24"
             android:title="@string/show_fillers_settings"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
     <SwitchPreference
             android:icon="@drawable/ic_baseline_play_arrow_24"
             app:key="@string/random_button_key"
             android:title="@string/random_button_settings"
             android:summary="@string/random_button_settings_desc"
-            app:defaultValue="false" />
+            app:defaultValue="true" />
 </PreferenceScreen>

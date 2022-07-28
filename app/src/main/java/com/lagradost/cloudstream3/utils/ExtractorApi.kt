@@ -232,11 +232,20 @@ val extractorApis: Array<ExtractorApi> = arrayOf(
     // Streamhub(), cause Streamhub2() works
     Streamhub2(),
 
+    YourUpload(),
+
+    Videobin(),
+    Videobin1(),
+
+    Sendvid(),
+    Sendvid1(),
+
     FEmbed(),
     FeHD(),
+    Femax20(),
+    Suzihaza(),
     Fplayer(),
     DBfilm(),
-    Luxubu(),
     LayarKaca(),
     //  WatchSB(), 'cause StreamSB.kt works
     Uqload(),
@@ -280,6 +289,9 @@ val extractorApis: Array<ExtractorApi> = arrayOf(
     //  SBPlay1(),
     //  SBPlay2(),
 
+    //Nsfw extractors
+    PlayLtXyz(),
+    JKhentaiExtractor(),
     PlayerVoxzer(),
 
     BullStream(),

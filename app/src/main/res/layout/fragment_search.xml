@@ -142,6 +142,22 @@
                 android:text="@string/documentaries" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/search_select_mirror"
+
+                style="@style/RoundedSelectableButton"
+                android:nextFocusLeft="@id/search_select_documentaries"
+                android:nextFocusRight="@id/search_select_nsfw"
+                android:text="@string/mirror" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/search_select_nsfw"
+
+                style="@style/RoundedSelectableButton"
+                android:nextFocusLeft="@id/search_select_mirror"
+                android:nextFocusRight="@id/search_select_livestreams"
+                android:text="@string/nsfw" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/search_select_livestreams"
                 style="@style/RoundedSelectableButton"
                 android:nextFocusLeft="@id/search_select_documentaries"
