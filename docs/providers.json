@@ -130,6 +130,12 @@
         "status": 1,
         "url": "https://cinecalidad.lol"
     },
+    "ComamosRamenProvider": {
+        "language": "es",
+        "name": "ComamosRamen",
+        "status": 1,
+        "url": "https://m.comamosramen.com"
+    },
     "CuevanaProvider": {
         "language": "es",
         "name": "Cuevana",
@@ -218,6 +224,12 @@
         "status": 1,
         "url": "https://filmpertutti.love"
     },
+    "FmoviesAPPProvider": {
+        "language": "en",
+        "name": "Fmovies",
+        "status": 1,
+        "url": "https://fmovies.app"
+    },
     "FmoviesToProvider": {
         "language": "en",
         "name": "Fmovies.to",
@@ -295,6 +307,12 @@
         "name": "Kim Cartoon",
         "status": 1,
         "url": "https://kimcartoon.li"
+    },
+    "KrunchyProvider": {
+        "language": "en",
+        "name": "Crunchyroll",
+        "status": 1,
+        "url": "http://www.crunchyroll.com"
     },
     "KuramanimeProvider": {
         "language": "id",
@@ -455,6 +473,12 @@
         "name": "Rebahin",
         "status": 1,
         "url": "http://167.88.14.149"
+    },
+    "SeriesMetroProvider": {
+        "language": "es",
+        "name": "SeriesMetro",
+        "status": 1,
+        "url": "https://seriesmetro.net"
     },
     "SeriesflixProvider": {
         "language": "es",
