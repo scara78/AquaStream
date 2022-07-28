@@ -52,7 +52,7 @@ class SettingsLang : PreferenceFragmentCompat() {
 
     private fun getCurrentLocale(): String {
         val res = requireContext().resources
-// Change locale settings in the app.
+        // Change locale settings in the app.
         // val dm = res.displayMetrics
         val conf = res.configuration
         return conf?.locale?.language ?: "en"
@@ -149,17 +149,14 @@ class SettingsLang : PreferenceFragmentCompat() {
 
         getPref(R.string.provider_lang_key)?.setOnPreferenceClickListener {
             activity?.getApiProviderLangSettings()?.let { current ->
-                val allLangs = HashSet<String>()
-                for (api in APIHolder.apis) {
-                    allLangs.add(api.lang)
-                }
+                val langs = APIHolder.apis.map { it.lang }.toSet().sortedBy { SubtitleHelper.fromTwoLettersToLanguage(it) }
 
                 val currentList = ArrayList<Int>()
                 for (i in current) {
-                    currentList.add(allLangs.indexOf(i))
+                    currentList.add(langs.indexOf(i))
                 }
 
-                val names = allLangs.map {
+                val names = langs.map {
                     val emoji = SubtitleHelper.getFlagFromIso(it)
                     val name = SubtitleHelper.fromTwoLettersToLanguage(it)
                     val fullName = "$emoji $name"
