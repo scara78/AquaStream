@@ -164,7 +164,9 @@ class HomeFragment : Fragment() {
             tvs: MaterialButton?,
             docs: MaterialButton?,
             movies: MaterialButton?,
+            mirror: MaterialButton?,
             asian: MaterialButton?,
+            nsfw: MaterialButton?,
             livestream: MaterialButton?,
         ): List<Pair<MaterialButton?, List<TvType>>> {
             return listOf(
@@ -173,7 +175,9 @@ class HomeFragment : Fragment() {
                 Pair(tvs, listOf(TvType.TvSeries)),
                 Pair(docs, listOf(TvType.Documentary)),
                 Pair(movies, listOf(TvType.Movie, TvType.Torrent)),
+                Pair(mirror, listOf(TvType.Mirror)),
                 Pair(asian, listOf(TvType.AsianDrama)),
+                Pair(nsfw, listOf(TvType.JAV, TvType.Hentai, TvType.XXX)),
                 Pair(livestream, listOf(TvType.Live)),
             )
         }
@@ -208,11 +212,13 @@ class HomeFragment : Fragment() {
                 val docs = dialog.findViewById<MaterialButton>(R.id.home_select_documentaries)
                 val movies = dialog.findViewById<MaterialButton>(R.id.home_select_movies)
                 val asian = dialog.findViewById<MaterialButton>(R.id.home_select_asian)
+                val mirror = dialog.findViewById<MaterialButton>(R.id.home_select_mirror)
                 val livestream = dialog.findViewById<MaterialButton>(R.id.home_select_livestreams)
                 val cancelBtt = dialog.findViewById<MaterialButton>(R.id.cancel_btt)
                 val applyBtt = dialog.findViewById<MaterialButton>(R.id.apply_btt)
+                val nsfw = dialog.findViewById<MaterialButton>(R.id.home_select_nsfw)
 
-                val pairList = getPairList(anime, cartoons, tvs, docs, movies, asian, livestream)
+                val pairList = getPairList(anime, cartoons, tvs, docs, movies, mirror, asian, nsfw, livestream)
 
                 cancelBtt?.setOnClickListener {
                     dialog.dismissSafe()
@@ -429,6 +435,9 @@ class HomeFragment : Fragment() {
                     Pair(R.string.anime, listOf(TvType.Anime, TvType.OVA, TvType.AnimeMovie)),
                     Pair(R.string.torrent, listOf(TvType.Torrent)),
                     Pair(R.string.asian_drama, listOf(TvType.AsianDrama)),
+                    Pair(R.string.jav, listOf(TvType.JAV)),
+                    Pair(R.string.hentai, listOf(TvType.Hentai)),
+                    Pair(R.string.xxx, listOf(TvType.XXX))
                 ).filter { item -> currentApi.supportedTypes.any { type -> item.second.contains(type) } }
                 home_provider_meta_info?.text =
                     typeChoices.joinToString(separator = ", ") { getString(it.first) }
