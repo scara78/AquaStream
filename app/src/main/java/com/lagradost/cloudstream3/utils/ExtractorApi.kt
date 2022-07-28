@@ -246,6 +246,7 @@ val extractorApis: Array<ExtractorApi> = arrayOf(
     Suzihaza(),
     Fplayer(),
     DBfilm(),
+    Luxubu(),
     LayarKaca(),
     //  WatchSB(), 'cause StreamSB.kt works
     Uqload(),
