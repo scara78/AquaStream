@@ -1,14 +1,14 @@
 # CloudStream-3
 
 <!-- ![Maintenance](https://img.shields.io/maintenance/yes/2022?color=blue&style=for-the-badge) -->
-![GitHub release](https://img.shields.io/github/v/release/killerdogeempire/cloudstream-3?sort=semver&style=for-the-badge)
-![Downloads](https://img.shields.io/github/downloads/killerdogeempire/CloudStream-3/total?color=blue&style=for-the-badge)
-![Build](https://img.shields.io/github/workflow/status/killerdogeempire/CloudStream-3/Pre-release?style=for-the-badge)
-[![Discord](https://img.shields.io/discord/737724143126052974?style=for-the-badge)](https://discord.gg/5Hus6fM)
+![GitHub release](https://img.shields.io/github/v/release/killerdogeempire/aquastream?sort=semver&style=for-the-badge)
+![Downloads](https://img.shields.io/github/downloads/killerdogeempire/AquaStream/total?color=blue&style=for-the-badge)
+![Build](https://img.shields.io/github/workflow/status/killerdogeempire/AquaStream/Pre-release?style=for-the-badge)
+[![Discord](https://img.shields.io/discord/737724143126052974?style=for-the-badge)](https://discord.gg/kg4NvJRdBg)
 
 
 **DOWNLOAD:**
-https://github.com/KillerDogeEmpire/CloudStream-3/releases
+https://github.com/KillerDogeEmpire/AquaStream/releases
 
 
 ***Features:***
@@ -68,4 +68,4 @@ It merely scrapes 3rd-party websites that are publicly accessable via any regula
 
 ***Sites used:***
 
-Look [here](https://killerdogeempire.github.io/CloudStream-3/) for a comprehensive list
+Look [here](https://killerdogeempire.github.io/AquaStream/) for a comprehensive list
