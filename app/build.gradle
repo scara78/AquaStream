@@ -31,7 +31,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.lagradost.cloudstream3"
+        applicationId "com.killerdogeempire.aquastream"
         minSdkVersion 21
         targetSdkVersion 30
 
@@ -52,14 +52,13 @@ android {
 
     buildTypes {
         release {
-            applicationIdSuffix ".killerdogeempiresfork"
             debuggable false
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         prerelease {
-            applicationIdSuffix ".prerelease.killerdogeempiresfork"
+            applicationIdSuffix ".prerelease"
             buildConfigField("boolean", "BETA", "true")
             signingConfig signingConfigs.prerelease
             versionNameSuffix '-PRE'

@@ -137,6 +137,8 @@ class SettingsFragment : Fragment() {
             Pair(settings_ui, R.id.action_navigation_settings_to_navigation_settings_ui),
             Pair(settings_lang, R.id.action_navigation_settings_to_navigation_settings_lang),
             Pair(settings_updates, R.id.action_navigation_settings_to_navigation_settings_updates),
+            Pair(settings_providers, R.id.action_navigation_settings_to_navigation_settings_providers),
+            Pair(settings_about, R.id.action_navigation_settings_to_navigation_settings_about),
         ).forEach { (view, navigationId) ->
             view?.apply {
                 setOnClickListener {

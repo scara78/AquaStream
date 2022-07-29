@@ -58,7 +58,7 @@
                     android:id="@+id/settings_general"
                     style="@style/SettingsItem"
                     android:text="@string/category_general" />
-            
+
             <TextView
                     android:nextFocusUp="@id/settings_general"
                     android:nextFocusDown="@id/settings_lang"
@@ -92,11 +92,27 @@
                     android:text="@string/category_updates" />
 
             <TextView
-                    android:nextFocusUp="@id/settings_updates"
-
                     android:id="@+id/settings_credits"
                     style="@style/SettingsItem"
+                    android:nextFocusUp="@id/settings_updates"
+                    android:nextFocusDown="@id/settings_providers"
                     android:text="@string/category_account" />
+
+            <TextView
+                android:id="@+id/settings_providers"
+
+                style="@style/SettingsItem"
+                android:nextFocusUp="@id/settings_credits"
+                android:nextFocusDown="@id/settings_about"
+                android:text="@string/category_providers" />
+
+            <TextView
+                android:id="@+id/settings_about"
+
+                style="@style/SettingsItem"
+                android:nextFocusUp="@id/settings_providers"
+                android:text="@string/category_about" />
+
 
             <TextView
                     android:padding="10dp"

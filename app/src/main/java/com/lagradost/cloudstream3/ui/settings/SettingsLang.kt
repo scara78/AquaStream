@@ -68,56 +68,6 @@ class SettingsLang : PreferenceFragmentCompat() {
         setPreferencesFromResource(R.xml.settings_media_lang, rootKey)
         val settingsManager = PreferenceManager.getDefaultSharedPreferences(requireContext())
 
-        getPref(R.string.display_sub_key)?.setOnPreferenceClickListener {
-            activity?.getApiDubstatusSettings()?.let { current ->
-                val dublist = DubStatus.values()
-                val names = dublist.map { it.name }
-
-                val currentList = ArrayList<Int>()
-                for (i in current) {
-                    currentList.add(dublist.indexOf(i))
-                }
-
-                activity?.showMultiDialog(
-                    names,
-                    currentList,
-                    getString(R.string.display_subbed_dubbed_settings),
-                    {}) { selectedList ->
-                    APIRepository.dubStatusActive = selectedList.map { dublist[it] }.toHashSet()
-
-                    settingsManager.edit().putStringSet(
-                        this.getString(R.string.display_sub_key),
-                        selectedList.map { names[it] }.toMutableSet()
-                    ).apply()
-                }
-            }
-
-            return@setOnPreferenceClickListener true
-        }
-
-        getPref(R.string.prefer_media_type_key)?.setOnPreferenceClickListener {
-            val prefNames = resources.getStringArray(R.array.media_type_pref)
-            val prefValues = resources.getIntArray(R.array.media_type_pref_values)
-
-            val currentPrefMedia =
-                settingsManager.getInt(getString(R.string.prefer_media_type_key), 0)
-
-            activity?.showBottomDialog(
-                prefNames.toList(),
-                prefValues.indexOf(currentPrefMedia),
-                getString(R.string.preferred_media_settings),
-                true,
-                {}) {
-                settingsManager.edit()
-                    .putInt(getString(R.string.prefer_media_type_key), prefValues[it])
-                    .apply()
-
-                AcraApplication.removeKey(HOMEPAGE_API)
-                (context ?: AcraApplication.context)?.let { ctx -> app.initClient(ctx) }
-            }
-            return@setOnPreferenceClickListener true
-        }
-
         getPref(R.string.locale_key)?.setOnPreferenceClickListener {
             val tempLangs = languages.toMutableList()
             //if (beneneCount > 100) {
