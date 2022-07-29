@@ -24,15 +24,15 @@ import com.lagradost.cloudstream3.utils.UIHelper.hideKeyboard
 import com.lagradost.cloudstream3.utils.getExtractorApiFromName
 
 
-    class SettingsProviders : PreferenceFragmentCompat() {
+class SettingsProviders : PreferenceFragmentCompat() {
 
 
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) { // you forgot that part
-            super.onViewCreated(view, savedInstanceState)
-            setUpToolbar(R.string.category_providers)
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) { // you forgot that part
+        super.onViewCreated(view, savedInstanceState)
+        setUpToolbar(R.string.category_providers) // it shows the name of the category on top
+    }
 
-        override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         hideKeyboard()
         setPreferencesFromResource(R.xml.settings_media_lang, rootKey)
         val settingsManager = PreferenceManager.getDefaultSharedPreferences(requireContext())
