@@ -27,9 +27,9 @@ import com.lagradost.cloudstream3.utils.getExtractorApiFromName
 class SettingsProviders : PreferenceFragmentCompat() {
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) { // you forgot that part
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setUpToolbar(R.string.category_providers) // it shows the name of the category on top
+        setUpToolbar(R.string.category_providers)
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
